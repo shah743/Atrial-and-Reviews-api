@@ -23,6 +23,9 @@ gem 'puma'
 #ActiveModel::Serializer implementation and Rails hooks
 gem 'active_model_serializers'
 
+# Provide Authorization
+gem 'cancancan', '~> 1.10'
+
 group :development, :test do
   gem 'pry'
   gem 'annotate'
