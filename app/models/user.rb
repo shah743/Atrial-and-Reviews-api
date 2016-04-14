@@ -15,6 +15,8 @@ class User < ApplicationRecord
   validates :name, :role,presence: true
   validates :api_key, uniqueness: true
 
+  has_many :task_lists
+
   enum role: [:admin, :user]
 
   # Assign an API key on create

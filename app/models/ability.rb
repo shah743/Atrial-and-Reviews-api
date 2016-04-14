@@ -12,6 +12,8 @@ class Ability
       can :read, :all
       can :update,  User, id: user.id
       can :destroy, User, id: user.id
+      can [:update, :destroy], TaskList, user_id: user.id
+      can [:update, :destroy], Task, task_list: { user_id: user.id }
     else
       can :read, :all
     end
